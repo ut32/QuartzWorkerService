@@ -22,10 +22,10 @@ namespace QuartzWorkerService
         private static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureLogging((context, builder) =>
-                {
+                {  
                     //builder.AddFilter("System", LogLevel.Warning); //过滤掉系统默认的一些日志
                     //builder.AddFilter("Microsoft", LogLevel.Warning);//过滤掉系统默认的一些日志
-
+  
                     builder.AddLog4Net();
                 })
                 .ConfigureServices((hostContext, services) =>
